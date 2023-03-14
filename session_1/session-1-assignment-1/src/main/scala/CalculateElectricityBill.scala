@@ -4,10 +4,10 @@ case class CustomerDetails(accountNumber: Int, username: String, address: String
 object CalculateElectricityBill extends App {
   //Method to calculate the electricity bill of the customer
   def calculateBill(billDetails: CustomerDetails): Double = {
-    val totalUnit = billDetails.currentUnit - billDetails.previousUnit
-    val totalAmount= getPrice(totalUnit)
-    val gst =totalAmount*0.18
-    val totalBillWithGst=totalAmount+gst
+    val totalUnit: Int = billDetails.currentUnit - billDetails.previousUnit
+    val totalAmount: Double = getPrice(totalUnit)
+    val gst: Double = totalAmount * 0.18
+    val totalBillWithGst: Double = totalAmount + gst
     totalBillWithGst
   }
 
