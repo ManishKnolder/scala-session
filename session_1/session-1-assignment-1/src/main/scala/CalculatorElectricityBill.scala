@@ -1,7 +1,7 @@
 case class CustomerDetails(accountNumber: Int, username: String, address: String, previousUnit: Int, currentUnit: Int)
 
 //Singleton Object
-object CalculateElectricityBill {
+object CalculateElectricityBill extends App {
   //Method to calculate the electricity bill of the customer
   def calculateBill(billDetails: CustomerDetails): Double = {
     val totalUnit = billDetails.currentUnit - billDetails.previousUnit
