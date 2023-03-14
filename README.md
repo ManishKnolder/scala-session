@@ -1,5 +1,6 @@
 # scala-session
-#Steps To calculate Electricity Bill
+# Steps To calculate Electricity Bill
+
 Step 1: In Intellij move to session-1-assignment-1/src/main/scala and create a CalculateElectricityBill.scala and after that use a case class and pass the parameter to it.
 Step 2: Create object and extend the App and inside it create a method that calculate the electricity bill as calculateBill and pass a parameter of case class instance.
 Step 3: In that method calculate the total unit and call the getPrice method and pass the total Unit in it.
