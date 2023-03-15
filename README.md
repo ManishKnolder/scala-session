@@ -16,6 +16,7 @@
 
 
 ## Session-1 Assignment-2
+### Factorial BY Tail Recursion
 **Step 1:** In Intellij move to **session-1-assignment-2/src/main/scala and create FactorialRecursion.scala file.     
 **Step 2:** Inside the file create a singleton object and inside it define a **method factorial** with two parameter **number and accumulator.**    
 **Step 3:** Use try catch exception handling if the number is not number(isNAN) then it throw NumberFormatException and catch resolve it.    
