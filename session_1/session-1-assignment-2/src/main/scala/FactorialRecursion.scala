@@ -1,8 +1,11 @@
+import scala.annotation.tailrec
+
 object FactorialRecursion extends App {
   //factorial method is used to calculate the factorial of the passed number as parameter.
+  @tailrec
   def factorial(number: Int, accumulator: Int): Int = {
     try {
-      if (number < 0) throw new NumberFormatException
+      if (number.isNaN) throw new NumberFormatException
     }
     catch {
       case ex: NumberFormatException => {
