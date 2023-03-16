@@ -19,5 +19,15 @@ object SortingProgram extends App {
     if (sortedList == list) sortedList
     else bubbleSort(sortedList)
   }
+
+  //This method is used to sort the element using selection Sort
+  def selectionSort(list: List[Int]): List[Int] = {
+    list match {
+      case Nil => Nil
+      case _ =>
+        val min = list.min
+        min :: selectionSort(list.filter(_ != min))
+    }
+  }
 }
 
