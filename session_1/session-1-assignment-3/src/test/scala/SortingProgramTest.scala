@@ -30,6 +30,6 @@ class SortingProgramTest extends AnyFlatSpec {
   //check with true output
   "it" should "match with value of insertion sort" in {
     val insertionSort = obj.insertionSort(list)
-    assert(List(2, 3, 7, 6, 7).sorted != insertionSort)
+    assert(List(2, 3, 7, 6, 7)!= insertionSort)
   }
 }
