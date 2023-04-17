@@ -22,4 +22,24 @@ class CalculateElectricityBillTest extends AnyFlatSpec {
     val secondBillAmount = CalculateElectricityBill.calculateBill(otherAccount)
     assert(secondBillAmount != 3937.5)
   }
+
+  it should "not match with negative current value" in {
+    val otherAccount = account.copy(previousUnit = -100, currentUnit = -1000)
+    val secondBillAmount = CalculateElectricityBill.calculateBill(otherAccount)
+    assert(secondBillAmount != 39327.5)
+  }
+
+  it should "not match with negative unit" in {
+    val otherAccount = account.copy(previousUnit = 100, currentUnit = 90)
+    val secondBillAmount = CalculateElectricityBill.calculateBill(otherAccount)
+    println(secondBillAmount)
+    assert(secondBillAmount != 1472.05)
+  }
+
+  it should "match with value using asserResult" in {
+    val firstBillAmount = CalculateElectricityBill.calculateBill(account)
+    assertResult(7073.51) {
+      firstBillAmount
+    }
+  }
 }
